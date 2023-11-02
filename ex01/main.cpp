@@ -2,12 +2,9 @@
 
 int main()
 {
-	Zombie a("first Zombie");
-	a.announce();
+	Zombie* array = zombieHorde(10, "zorrothezombie");
 	
-	Zombie* b = newZombie("second Zombie");
-	b->announce();
-	delete b;
-
-	randomChump("third Zombie");
+	for (int i = 0; i < 10; i++){array[i].announce();}
+	
+	delete[] array;
 }
