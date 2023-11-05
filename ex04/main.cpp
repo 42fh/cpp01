@@ -14,6 +14,8 @@ int main(int argc, char const *argv[])
 	std::ifstream input;
 	std::ofstream output;
 	
+	if (filename.empty() == true || findstr.empty() == true){std::cout << "file name and find string must be non empty" << std::endl; std::exit(1);}
+
 	input.open(filename.c_str());
 	output.open((filename + ".replace").c_str());
 
